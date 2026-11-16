@@ -1,0 +1,12 @@
+# Bundle layer for the dsh-highlights plugin.
+# A profile that lists this bundle composes this row; the browser half of the
+# same package is discovered automatically from `dsh.client` in package.json
+# (one Loader row serves both halves).
+- insert:
+    - id: highlights
+      name: dsh-highlights
+      config:
+        maxRecords: 10000
+        insertionAttribution: true
+        pollIntervalMs: 0
+        purgeTombstonesAfterDays: 30

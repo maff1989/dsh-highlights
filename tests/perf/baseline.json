@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-12",
+  "note": "Phase-0 baseline ledger. Values are the review's measured numbers (provenance recorded per row); the live harness that re-measures them is promoted in tests/perf and documented in README.md. Do not compare across fixtures.",
+  "fixtures": {
+    "FIX-SMALL": {
+      "description": "12 records / 15 overlay boxes / scrollTop 9971 (the keep-alive A/B surface)",
+      "chatNodes": null,
+      "domNodes": null,
+      "scrollHeight": null
+    },
+    "FIX-BIG": {
+      "description": "real user session session-face646c; 681 chat nodes / 16 372 DOM / 62 919 px after full paging; manual/reference only",
+      "chatNodes": 681,
+      "domNodes": 16372,
+      "scrollHeight": 62919
+    },
+    "FIX-BIG-DEV": {
+      "description": "seeded equivalent built by tools/dev-instance; the CI fixture (to be pinned in Phase 1)",
+      "chatNodes": null,
+      "domNodes": null,
+      "scrollHeight": null
+    }
+  },
+  "metrics": [
+    {
+      "id": "boot.appInteractive",
+      "value": 1080,
+      "unit": "ms",
+      "provenance": "review/perf.md \u00a72.1 (measured, n=5)"
+    },
+    {
+      "id": "page.open.settle",
+      "value": 77,
+      "unit": "ms",
+      "provenance": "review/perf.md \u00a72.2 (measured, n=5) first mutation 73 ms"
+    },
+    {
+      "id": "jump.g2.longestTask",
+      "value": 460,
+      "unit": "ms",
+      "provenance": "dsh-core-perf-patch README (measured, FIX-SMALL, keep-alive)"
+    },
+    {
+      "id": "jump.g1.longestTask",
+      "value": 2089.5,
+      "unit": "ms",
+      "provenance": "review/perf-before-after.md (measured, FIX-BIG, plugin fixed)"
+    },
+    {
+      "id": "jump.g1.pluginShare",
+      "value": 303.6,
+      "unit": "ms",
+      "provenance": "review/perf-before-after.md (measured, FIX-BIG)"
+    },
+    {
+      "id": "jump.g1.forcedLayouts",
+      "value": 1,
+      "unit": "count",
+      "provenance": "review/perf-before-after.md (measured, FIX-BIG)"
+    },
+    {
+      "id": "streaming.pluginPerSecond",
+      "value": 60,
+      "unit": "ms/s",
+      "provenance": "review/audits/watchers.md \u00a74 (range 30-90, derived)"
+    },
+    {
+      "id": "hiddenStreaming.pluginPerSecond",
+      "value": 60,
+      "unit": "ms/s",
+      "provenance": "review/audits/watchers.md \u00a74 (range 30-90, inferred)"
+    },
+    {
+      "id": "floatingSurface.pluginPerSecond",
+      "value": 13,
+      "unit": "ms/s",
+      "provenance": "review/audits/watchers.md \u00a74 (range 6-20, inferred)"
+    },
+    {
+      "id": "host.list10k.bytes",
+      "value": 55155000,
+      "unit": "bytes",
+      "provenance": "REVIEW H10 (52.6 MiB ASCII, measured)"
+    },
+    {
+      "id": "tests.green",
+      "value": 374,
+      "unit": "count",
+      "provenance": "pnpm test at 1a2fde1; notes say 366"
+    }
+  ],
+  "gates": {
+    "hiddenWork": {
+      "callbacks": 0,
+      "targetMsPerSecond": 2,
+      "measuredCeilingMsPerSecond": 5
+    },
+    "paint": {
+      "forcedLayoutsFirstPass": 1,
+      "forcedLayoutsLaterPass": 0,
+      "registryWritesWhenUnchanged": 0
+    },
+    "store": {
+      "duplicateRenderWaves": 0,
+      "readsOnFailure": 0
+    },
+    "reveal": {
+      "inFlightMax": 1,
+      "pluginMsMax": 350,
+      "pluginShareMax": 0.15
+    },
+    "host": {
+      "list10kGzipBytesMax": 2097152,
+      "corruptRecordMustNotDisable": true
+    }
+  },
+  "live": {
+    "capturedAt": "2026-11-12T19:23:00-07:00",
+    "provenance": "tests/perf/live/sec-a-boot-nav.mjs run against the installed rc.1 runtime (hot-patch applied); NOT the repository build. Read-only headless client; n=1.",
+    "artifact": "tests/perf/live/artifacts/sec-a-boot-nav-2026-11-12.json",
+    "sectionA": {
+      "boot": {
+        "domInteractiveMs": 109,
+        "loadEventEndMs": 1171,
+        "longestTaskMs": 687,
+        "longTaskTotalMs": 932,
+        "domNodes": 1184,
+        "geometryMs": 62.9
+      },
+      "coldNavHighlights": {
+        "wallMs": 671,
+        "longestLongTaskMs": 0,
+        "longTaskCount": 0,
+        "geometryMs": 43.6,
+        "pluginGeometryMs": 0,
+        "rows": 11,
+        "sessions": 3,
+        "pageScrollHeight": 1203
+      },
+      "warmNavHighlights": {
+        "wallMs": 602,
+        "longestLongTaskMs": 0,
+        "longTaskCount": 0,
+        "geometryMs": 39,
+        "pluginGeometryMs": 0
+      },
+      "notes": "Page is a small live store (11 rows); no large-list or reveal section was run. Absolute values are headless software rendering and transfer only as ratios."
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "section": "A",
+  "iterations": [
+    {
+      "iteration": 1,
+      "boot": {
+        "ready": true,
+        "now": 1424,
+        "nav": {
+          "domInteractive": 109,
+          "domContentLoaded": 222,
+          "loadEventEnd": 1171,
+          "responseEnd": 6
+        },
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 248
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 248
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 245,
+            "dur": 166
+          },
+          {
+            "start": 453,
+            "dur": 687
+          },
+          {
+            "start": 1172,
+            "dur": 79
+          }
+        ],
+        "longTaskTotalMs": 932,
+        "longestTaskMs": 687,
+        "frames": 16,
+        "domNodes": 1184,
+        "geometry": {
+          "calls": 22,
+          "totalMs": 62.9,
+          "byClass": {
+            "dsh": {
+              "count": 22,
+              "totalMs": 62.90000000000002
+            }
+          }
+        },
+        "session": null,
+        "flowNodes": 0,
+        "pluginBoot": {
+          "hosts": 0,
+          "layers": 0,
+          "navRow": true
+        },
+        "readyWallMs": 1
+      },
+      "coldNav": {
+        "wallMs": 671,
+        "longTaskCount": 0,
+        "longTaskTotalMs": 0,
+        "longestTaskMs": 0,
+        "longTasks": [],
+        "geomCalls": 22,
+        "geomMs": 43.6,
+        "pluginGeomMs": 0,
+        "geomByClass": {
+          "other": {
+            "count": 16,
+            "totalMs": 43.5,
+            "maxMs": 21.7
+          },
+          "dsh": {
+            "count": 6,
+            "totalMs": 0.1,
+            "maxMs": 0.1
+          }
+        },
+        "geomByKind": {
+          "element.getBoundingClientRect": {
+            "count": 22,
+            "totalMs": 43.6,
+            "maxMs": 21.7,
+            "caller": "proto.<computed> [as getBoundingClientRect] (<anonymous>:82:25) <- z1 (http://172.16.2.20:3080/assets/index-BgUyXZcc.js:194:30846) <- dZ (http://172.16.2.20:3080/assets/index-BgUyXZcc.js:194:31916)"
+          }
+        },
+        "mutationBatches": 3,
+        "domAdded": 1,
+        "domRemoved": 0,
+        "attrMutations": 7,
+        "frames": 39,
+        "maxFrameGapMs": 33,
+        "p95FrameGapMs": 17,
+        "gapsOver100": 0,
+        "registryWrites": 0,
+        "scrollWrites": 0,
+        "selectionEvents": 0,
+        "counters": {},
+        "renders": {},
+        "label": "A.cold-nav#1",
+        "timedOut": false,
+        "firstMutationMs": 39,
+        "lastMutationMs": 52,
+        "lastLongTaskEndMs": null,
+        "quietMs": 600,
+        "settleFromActionMs": 39,
+        "events": [],
+        "keyLatencies": [],
+        "page": {
+          "rows": 11,
+          "groups": 1,
+          "sessions": 3,
+          "count": "11 highlights",
+          "domNodes": 1737,
+          "pageScroll": {
+            "clientHeight": 900,
+            "scrollHeight": 1203
+          }
+        },
+        "metrics": {
+          "nodes": 2530,
+          "documents": 4,
+          "listeners": 363,
+          "heapMB": 29.07,
+          "layouts": 137,
+          "recalcStyle": 155,
+          "layoutMs": 92.7,
+          "scriptMs": 421.2,
+          "taskMs": 1701.3
+        }
+      },
+      "warmNav": {
+        "wallMs": 602,
+        "longTaskCount": 0,
+        "longTaskTotalMs": 0,
+        "longestTaskMs": 0,
+        "longTasks": [],
+        "geomCalls": 22,
+        "geomMs": 39,
+        "pluginGeomMs": 0,
+        "geomByClass": {
+          "other": {
+            "count": 16,
+            "totalMs": 38.7,
+            "maxMs": 19.2
+          },
+          "dsh": {
+            "count": 6,
+            "totalMs": 0.3,
+            "maxMs": 0.1
+          }
+        },
+        "geomByKind": {
+          "element.getBoundingClientRect": {
+            "count": 22,
+            "totalMs": 39,
+            "maxMs": 19.2,
+            "caller": "proto.<computed> [as getBoundingClientRect] (<anonymous>:82:25) <- z1 (http://172.16.2.20:3080/assets/index-BgUyXZcc.js:194:30846) <- dZ (http://172.16.2.20:3080/assets/index-BgUyXZcc.js:194:31916)"
+          }
+        },
+        "mutationBatches": 3,
+        "domAdded": 1,
+        "domRemoved": 0,
+        "attrMutations": 7,
+        "frames": 35,
+        "maxFrameGapMs": 33,
+        "p95FrameGapMs": 17,
+        "gapsOver100": 0,
+        "registryWrites": 0,
+        "scrollWrites": 0,
+        "selectionEvents": 0,
+        "counters": {},
+        "renders": {},
+        "label": "A.warm-nav#1",
+        "timedOut": false,
+        "firstMutationMs": 33,
+        "lastMutationMs": 46,
+        "lastLongTaskEndMs": null,
+        "quietMs": 500,
+        "settleFromActionMs": 33,
+        "events": [],
+        "keyLatencies": [],
+        "page": {
+          "rows": 11,
+          "domNodes": 1737
+        },
+        "metrics": {
+          "nodes": 3161,
+          "documents": 4,
+          "listeners": 421,
+          "heapMB": 32.51,
+          "layouts": 197,
+          "recalcStyle": 221,
+          "layoutMs": 121.1,
+          "scriptMs": 451.3,
+          "taskMs": 1873.6
+        }
+      },
+      "audit": {
+        "dom": {
+          "session": "session-6e5e5deb-5f17-4e72-a703-686897c803d7",
+          "conversationMounted": true,
+          "pageMounted": true,
+          "flowNodes": 0,
+          "scrollers": 1,
+          "highlightHosts": 0,
+          "layers": 0,
+          "boxes": 0,
+          "bands": 0,
+          "pageRows": 11,
+          "pageGroups": 0,
+          "panelRows": 0,
+          "panelMounted": false,
+          "affordance": 0,
+          "card": 0,
+          "dialog": 0,
+          "menu": 0,
+          "domNodes": 1737,
+          "scrollHeight": 0,
+          "scrollTop": 0,
+          "innerHeight": 900,
+          "innerWidth": 1440
+        },
+        "observers": {
+          "MutationObserver": 5,
+          "ResizeObserver": 6,
+          "IntersectionObserver": 0,
+          "PerformanceObserver": 1,
+          "Highlight": 0
+        },
+        "highlights": {
+          "names": [],
+          "nameCount": 0,
+          "ranges": 0
+        }
+      }
+    }
+  ],
+  "startedAt": "2026-11-13T02:23:30.842Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "aggregate": {
+    "readyWallMs": {
+      "median": 1,
+      "values": [
+        1
+      ]
+    },
+    "navDomInteractive": {
+      "median": 109,
+      "values": [
+        109
+      ]
+    },
+    "bootLongestMs": {
+      "median": 687,
+      "values": [
+        687
+      ]
+    },
+    "bootLongTaskTotalMs": {
+      "median": 932,
+      "values": [
+        932
+      ]
+    },
+    "bootLongTaskCount": [
+      3
+    ],
+    "bootGeometryMs": {
+      "median": 62.9,
+      "values": [
+        62.9
+      ]
+    },
+    "coldNavSettleMs": {
+      "median": 39,
+      "values": [
+        39
+      ]
+    },
+    "warmNavSettleMs": {
+      "median": 33,
+      "values": [
+        33
+      ]
+    },
+    "coldNavLongestMs": {
+      "median": 0,
+      "values": [
+        0
+      ]
+    },
+    "warmNavLongestMs": {
+      "median": 0,
+      "values": [
+        0
+      ]
+    },
+    "coldNavLongTotalMs": {
+      "median": 0,
+      "values": [
+        0
+      ]
+    },
+    "warmNavLongTotalMs": {
+      "median": 0,
+      "values": [
+        0
+      ]
+    },
+    "coldPageNodes": {
+      "median": 1737,
+      "values": [
+        1737
+      ]
+    },
+    "pageRows": [
+      11
+    ],
+    "coldFirstMutationMs": {
+      "median": 39,
+      "values": [
+        39
+      ]
+    },
+    "warmFirstMutationMs": {
+      "median": 33,
+      "values": [
+        33
+      ]
+    }
+  }
+}
