@@ -7,6 +7,7 @@
     "url": "git+ssh://git@github.com/maff1989/dsh-highlights.git"
   },
   "description": "Digital-book-style highlights for DeepSeek Harness: highlight agent reply text, browse per session and globally, jump back, insert into a composer.",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": "./lib/index.js",
