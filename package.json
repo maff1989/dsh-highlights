@@ -80,10 +80,5 @@
     "test:watch": "vitest",
     "check:bundle": "node scripts/check-bundle.mjs",
     "verify": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run check:bundle"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
